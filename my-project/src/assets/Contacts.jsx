@@ -38,8 +38,8 @@ export default function Contacts() {
   return (
     <div className="d-flex justify-content-center">
       <section>
-        <h3 className="py-1">Vuoi avere altre info? Contattaci!</h3>
-        <div className="container mt-1">
+        <h3 className="py-2">Vuoi avere altre info? Contattaci!</h3>
+        <div className="container mt-2">
           {!submitted ? (
             <form
               className="border border-solid p-3 text-center"
@@ -85,7 +85,7 @@ export default function Contacts() {
               </div>
               <button
                 type="submit"
-                className="btn btn-success mt-3 rounded-pill"
+                className="btn btn-success mt-2 rounded-pill"
               >
                 Invia
               </button>
