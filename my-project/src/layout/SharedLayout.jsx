@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
 import { Outlet } from "react-router";
 import './sharedlayout.css'
+/* import Footer from '../assets/Footer'; */
 
 
 const SharedLayout = () => {
@@ -10,6 +11,7 @@ const SharedLayout = () => {
       className="container">
       <NavBar />
       <Outlet />
+      {/* <Footer />  */}
     </div>
   );
 };

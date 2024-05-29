@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function Login() {
@@ -38,47 +37,44 @@ export default function Login() {
   return (
     <div className="d-flex justify-content-center">
       <section>
-        <div className="container mt-5">
-            <form className="border border-solid p-4 mt-5 text-center" 
+        <div className="container mt-3">
+          <form className="border border-secondary rounded p-5 text-center" 
             onSubmit={formSubmissionHandler}>
-              <div className="form-group mb-2">
-                <input
-                  value={username}
-                  type="text"
-                  className="form-control"
-                  onChange={(event) => setUsername(event.target.value)}
-                  placeholder="username"
-                />
-              </div>
-              <div className="form-group mb-2">
-                <input
-                  value={password}
-                  type="password"
-                  className="form-control"
-                  onChange={(event) => setPassword(event.target.value)}
-                  placeholder="password"
-                />
-              </div>
-              <button
-                type="submit"
-                onClick={checkLogin}
-                className="btn btn-success rounded-pill mt-3"
-              >
-                Login
-              </button>
-              {wrongLogin && (
-                <div className="text-center text-danger">
-                  Credenziali errate!
-                </div>
-              )}
-            </form>
+            <div className="form-group mb-3">
+              <input
+                value={username}
+                type="text"
+                className="form-control mx-auto w-77"
+                onChange={(event) => setUsername(event.target.value)}
+                placeholder="username"
+              />
             </div>
-            <div className="d-flex justify-content-center py-4">
-          <Link to="/" className="btn btn-success rounded-pill">
-            Ritorna alla pagina principale
-          </Link>
+            <div className="form-group mb-2">
+              <input
+                value={password}
+                type="password"
+                className="form-control mx-auto w-77"
+                onChange={(event) => setPassword(event.target.value)}
+                placeholder="password"
+              />
+            </div>
+            <button
+              type="submit"
+              onClick={checkLogin}
+              className="btn btn-success rounded-pill mx-auto w-20 mt-3"
+            >
+              Login
+            </button>
+            {wrongLogin && (
+              <div className="text-center text-danger">
+                Credenziali errate!
+              </div>
+            )}
+          </form>
         </div>
-          </section>
+        <div className="d-flex justify-content-center">
         </div>
+      </section>
+    </div>
   );
 }

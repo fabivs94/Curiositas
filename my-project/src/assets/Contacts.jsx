@@ -38,14 +38,14 @@ export default function Contacts() {
   return (
     <div className="d-flex justify-content-center">
       <section>
-        <h3 className="py-2">Vuoi avere altre info? Contattaci!</h3>
-        <div className="container mt-2">
+        <h3 className="p-1">Vuoi avere altre info? Contattaci!</h3>
+        <div className="container">
           {!submitted ? (
             <form
-              className="border border-solid p-3 text-center"
+              className="border border-secondary rounded p-5 text-center"
               onSubmit={handleSubmit}
             >
-              <div className="form-group mb-3">
+              <div className="form-group mb-2">
                 <input
                   type="text"
                   className={"form-control " + (!nameValid ? "is-invalid" : "")}
@@ -53,7 +53,7 @@ export default function Contacts() {
                   placeholder="Inserisci il tuo nome"
                 />
               </div>
-              <div className="form-group mb-3">
+              <div className="form-group mb-2">
                 <input
                   type="text"
                   className={
@@ -63,7 +63,7 @@ export default function Contacts() {
                   placeholder="Inserisci il tuo cognome"
                 />
               </div>
-              <div className="form-group mb-3">
+              <div className="form-group mb-2">
                 <input
                   type="email"
                   className={
@@ -73,7 +73,7 @@ export default function Contacts() {
                   placeholder="Inserisci la tua email"
                 />
               </div>
-              <div className="form-group mb-3">
+              <div className="form-group mb-2">
                 <textarea
                   className={
                     "form-control " + (!messageValid ? "is-invalid" : "")
@@ -85,7 +85,7 @@ export default function Contacts() {
               </div>
               <button
                 type="submit"
-                className="btn btn-success mt-2 rounded-pill"
+                className="btn btn-success rounded-pill mt-3"
               >
                 Invia
               </button>
@@ -103,11 +103,6 @@ export default function Contacts() {
               <p>Grazie per averci contattato!</p>
             </div>
           )}
-        </div>
-        <div className="d-flex justify-content-center py-4">
-          <Link to="/" className="btn btn-success rounded-pill">
-            Ritorna alla pagina principale
-          </Link>
         </div>
       </section>
     </div>

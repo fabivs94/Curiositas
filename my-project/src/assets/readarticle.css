@@ -1,0 +1,39 @@
+.read-article {
+  padding: 1rem;
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.display-8 {
+  text-align: center;
+}
+
+.container {
+  padding: 2rem;
+}
+
+p {
+  font-family: 'Helvetica', serif;
+  font-size: larger;
+  text-align: justify;
+}
+
+.fs-5 {
+  font-size: 1.5rem;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.img-fluid {
+  width: 85%;
+}
+
+.btn-success {
+  background-color: #00c292;
+}

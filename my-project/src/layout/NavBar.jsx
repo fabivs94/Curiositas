@@ -8,7 +8,9 @@ export default function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
       <div className="container">
-        <img className="logo" src="https://i.ibb.co/JrZp2K4/Curiositas-logo.png" alt="blog logo" />
+      <NavLink to="/">
+          <img className="logo" src="https://i.ibb.co/JrZp2K4/Curiositas-logo.png" alt="blog logo" />
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -37,13 +39,12 @@ export default function NavBar() {
           </ul>
         </div>
         <div className="d-flex justify-content-end">
-          <NavLink
-            to="/login"
-            className={`btn btn-success rounded-pill me-3 ${active ? "active" : ""} login-btn`}
-            onMouseEnter={() => setActive(true)}
-            onMouseLeave={() => setActive(false)}
-            onClick={() => setActive(true)}
-          >
+        <NavLink
+          to="/login"
+          className={`btn btn-success rounded-pill me-3 ${active ? "active" : ""} login-btn`}
+          onMouseEnter={() => setActive(true)}
+          onMouseLeave={() => setActive(false)}
+        >
             Login
           </NavLink>
         </div>

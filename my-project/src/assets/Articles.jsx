@@ -60,7 +60,7 @@ export default function Articles() {
       <div
         className="d-flex flex-wrap justify-content-around"
       >
-        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <div className="row row-cols-1 row-cols-md-3 row-cols-lg-3">
           {articles.map((article) => (
             <>
               <div key={article.id} className="col">
@@ -71,7 +71,7 @@ export default function Articles() {
                   >
                     <img
                       src={article.image}
-                      className="card-img-top img-fluid"
+                      className="card-img-top"
                       alt={article.title}
                     />
                   </div>
@@ -89,11 +89,6 @@ export default function Articles() {
               </div>
             </>
           ))}
-        </div>
-        <div className="d-flex mx-auto m-4 justify-content-center">
-          <Link to="/" className="btn btn-success rounded-pill">
-            Ritorna alla pagina principale
-          </Link>
         </div>
       </div>
     </div>
