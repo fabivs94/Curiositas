@@ -57,37 +57,33 @@ export default function Articles() {
       <h2 className="text-center bg-transparent text-white py-4">
         Curiosità sul mondo enologico
       </h2>
-      <div
-        className="d-flex flex-wrap justify-content-around"
-      >
+      <div className="d-flex flex-wrap justify-content-around">
         <div className="row row-cols-1 row-cols-md-3 row-cols-lg-3">
           {articles.map((article) => (
-            <>
-              <div key={article.id} className="col">
-                <div className="card text-white bg-dark mb-2">
-                  <div
+            <div key={article.id} className="col">
+              <div className="card text-white bg-dark mb-2">
+                <div
+                  className="card-img-top"
+                  style={{ height: "200px", overflow: "hidden" }}
+                >
+                  <img
+                    src={article.image}
                     className="card-img-top"
-                    style={{ height: "200px", overflow: "hidden" }}
+                    alt={article.title}
+                  />
+                </div>
+                <div className="card-body text-center">
+                  <h5 className="card-title">{article.title}</h5>
+                  <p className="card-text">{article.description}</p>
+                  <Link
+                    to={article.link}
+                    className="btn btn-success rounded-pill"
                   >
-                    <img
-                      src={article.image}
-                      className="card-img-top"
-                      alt={article.title}
-                    />
-                  </div>
-                  <div className="card-body text-center">
-                    <h5 className="card-title">{article.title}</h5>
-                    <p className="card-text">{article.description}</p>
-                    <Link
-                      to={article.link}
-                      className="btn btn-success rounded-pill"
-                    >
-                      Leggi l'articolo
-                    </Link>
-                  </div>
+                    Leggi l'articolo
+                  </Link>
                 </div>
               </div>
-            </>
+            </div>
           ))}
         </div>
       </div>
